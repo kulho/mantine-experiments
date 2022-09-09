@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import { Web3Provider } from "./Context/Web3Context";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
@@ -8,9 +9,11 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+  <Web3Provider>
+    <StrictMode>
+      <App />
+    </StrictMode>
+  </Web3Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
